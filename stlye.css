@@ -2,11 +2,33 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header, footer {
+header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em 0;
+    position: relative;
+}
+
+#menu-button {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#navigation-menu {
+    display: none; /* Hide menu on small screens */
+}
+
+#navigation-menu.active {
+    display: block; /* Show menu when active */
 }
 
 section {
@@ -14,14 +36,16 @@ section {
     padding: 1em;
 }
 
-/* Responsive navigation menu styles */
-nav {
-    /* Styles for your navigation menu */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
 }
 
-/* Media query for mobile devices */
+/* Media query for smaller screens */
 @media (max-width: 600px) {
-    nav {
-        /* Adjustments for smaller screens */
+    #menu-button {
+        display: block; /* Show button on small screens */
     }
 }
