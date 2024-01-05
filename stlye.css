@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+section {
+    margin: 1em 0;
+    padding: 1em;
+}
+
+/* Responsive navigation menu styles */
+nav {
+    /* Styles for your navigation menu */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    nav {
+        /* Adjustments for smaller screens */
+    }
+}
