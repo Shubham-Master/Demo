@@ -1,9 +1,15 @@
-// Script for any dynamic functionality, like responsive menu
-document.addEventListener('DOMContentLoaded', function() {
-    var menuButton = document.getElementById('menu-button');
-    var navigationMenu = document.getElementById('navigation-menu');
+(function() {
+    function toggleMenu() {
+        var navigationMenu = document.getElementById('navigation-menu');
+        if (navigationMenu) {
+            navigationMenu.classList.toggle('active');
+        }
+    }
 
-    menuButton.addEventListener('click', function() {
-        navigationMenu.classList.toggle('active');
-    });
-});
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuButton = document.getElementById('menu-button');
+        if (menuButton) {
+            menuButton.addEventListener('click', toggleMenu, false);
+        }
+    }, false);
+})();
