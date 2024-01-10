@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0; /* Add this to remove default browser margin */
 }
 
 header {
@@ -11,7 +12,7 @@ header {
 }
 
 #menu-button {
-    display: none; /* Hidden by default */
+    /* Keep it hidden by default */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -21,10 +22,20 @@ header {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
+    z-index: 100; /* Ensure the button is above other elements */
+}
+
+#navigation-menu a {
+    color: white; /* Make sure the links are visible on the dark background */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 0 15px; /* Add spacing around the links */
 }
 
 #navigation-menu {
-    display: none; /* Hide menu on small screens */
+    /* Show the menu by default on large screens */
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+    gap: 10px; /* Add space between menu items */
 }
 
 #navigation-menu.active {
@@ -32,7 +43,7 @@ header {
 }
 
 section {
-    margin: 1em 0;
+    margin: 1em 5%; /* Add percentage to give some spacing from the viewport */
     padding: 1em;
 }
 
@@ -47,5 +58,16 @@ footer {
 @media (max-width: 600px) {
     #menu-button {
         display: block; /* Show button on small screens */
+    }
+
+    #navigation-menu {
+        display: none; /* Hide menu on small screens */
+        /* If you want a vertical menu on small screens, you can add: */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navigation-menu.active {
+        display: flex; /* Flex will take care of the layout */
     }
 }
